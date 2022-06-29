@@ -1,15 +1,12 @@
-import React, {Fragment} from 'react'
+import React, { Fragment } from 'react';
+import { Notification, Section } from 'rbx';
 import './App.scss';
-import HomeScreen from './screens/home';
-import Routing from './routes';
+import Routes from './routes';
 
 const App = () => (
-
-    <Fragment>
-        <HomeScreen/>
-        <Routing/>
-    </Fragment>
-
+  <Fragment>
+    <Routes/>
+  </Fragment>
 )
 
 export default App;

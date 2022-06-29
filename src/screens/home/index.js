@@ -1,31 +1,37 @@
-import { Column, Container, Section, Title } from 'rbx';
-import React, { Fragment } from 'react'
+import React, { Fragment } from 'react';
 import presentationImage from '../../assets/images/presentation.png';
 import Header from '../../components/header';
+import { Column, Section, Title, Container } from 'rbx';
 import '../../styles/home.scss';
+import { Link } from 'react-router-dom';
 
+const HomeScreen = () => (
+  <Fragment>
+    <Header />
 
-const HomeScreen = () => {
-  return (
-   <Fragment>
-        <Header/>        
-            <Section size='medium' className='home'>
-                <Container>
-                    <Column.Group>
-                        <Column size={5}>
-                            <Title size={2} spaced className='has-text-white'>Crie suas notas facilmente e acesse em nuvem </Title>
-                            <Title size={5} spaced className='has-text-light' subtitle> Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum 
-                            </Title>
-                            <a href='#' className='button is-outlined is-white is-large' alt= "" ><strong>register for free now</strong></a>
-                        </Column>
-                        <Column size={6} offset={1}>
-                            <img src={presentationImage} alt="" />
-                        </Column>
-                    </Column.Group>
-                </Container>
-            </Section>
-   </Fragment>
-  )
-}
+    <Section size="medium" className="home">
+      <Container>
+        <Column.Group>
+          <Column size={5}>
+            <Title size={2} spaced className="has-text-white">
+              Create notes easily and access when you wants on the cloud
+</Title>
+            <Title size={5} spaced className="has-text-light" subtitle>
+              Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs.<br /><br />
+              Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print.
+</Title>
+            <Link to='/register' className="button is-outlined is-white is-large">
+              <strong>Register for free Now</strong>
+            </Link>
+          </Column>
+          <Column size={6} offset={1}>
+            <img src={presentationImage}/>
+          </Column>
+        </Column.Group>
+      </Container>
+    </Section>
+
+  </Fragment>
+)
 
 export default HomeScreen;
